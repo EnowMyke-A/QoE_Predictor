@@ -32,10 +32,10 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-surface flex flex-col">
       {/* Header */}
-      <header className="h-20 glass sticky top-0 z-50 px-10 flex items-center justify-between border-b border-outline-variant/5">
-        <div className="flex items-center gap-12">
+      <header className="h-16 md:h-20 glass sticky top-0 z-50 px-6 md:px-10 flex items-center justify-between border-b border-outline-variant/5">
+        <div className="flex items-center gap-8 md:gap-12">
           <h2 className="title-sm font-bold text-on-surface">QoE Insight Dashboard</h2>
-          <nav className="flex items-center gap-8">
+          <nav className="flex items-center gap-4 md:gap-8">
             {['Analysis', 'Historical', 'Datasets'].map((tab) => (
               <button
                 key={tab}
@@ -69,16 +69,16 @@ export default function Dashboard() {
         </div>
       </header>
 
-      <main className="flex-1 p-10 max-w-[1600px] mx-auto w-full grid grid-cols-12 gap-10">
+      <main className="flex-1 p-6 md:p-10 max-w-[1600px] mx-auto w-full grid grid-cols-12 gap-6 md:gap-10">
         {/* Left Column: Configuration */}
-        <div className="col-span-12 lg:col-span-4 space-y-10">
+        <div className="col-span-12 lg:col-span-4 space-y-6 md:space-y-10">
           <div className="space-y-2">
             <h1 className="headline-md">Configure Parameters</h1>
             <p className="body-md text-on-surface-variant/60">Adjust dataset constraints for ML prediction.</p>
           </div>
 
           {/* Video Experience Section */}
-          <section className="bg-surface-container-low p-8 rounded-[2rem] space-y-8">
+          <section className="bg-surface-container-low p-6 md:p-8 rounded-[2rem] space-y-6 md:space-y-8">
             <div className="flex items-center gap-3 text-primary">
               <Video size={20} />
               <h3 className="title-sm">Video Experience</h3>
@@ -137,7 +137,7 @@ export default function Dashboard() {
           </section>
 
           {/* Messaging & Media Section */}
-          <section className="bg-surface-container-low p-8 rounded-[2rem] space-y-8">
+          <section className="bg-surface-container-low p-6 md:p-8 rounded-[2rem] space-y-6 md:space-y-8">
             <div className="flex items-center gap-3 text-primary">
               <MessageSquare size={20} />
               <h3 className="title-sm">Messaging & Media</h3>
@@ -179,7 +179,7 @@ export default function Dashboard() {
           </section>
 
           {/* Network QoS Metrics Section */}
-          <section className="bg-surface-container-low p-8 rounded-[2rem] space-y-8">
+          <section className="bg-surface-container-low p-6 md:p-8 rounded-[2rem] space-y-6 md:space-y-8">
             <div className="flex items-center gap-3 text-primary">
               <Network size={20} />
               <h3 className="title-sm">Network QoS Metrics</h3>
@@ -228,14 +228,14 @@ export default function Dashboard() {
         </div>
 
         {/* Right Column: Results */}
-        <div className="col-span-12 lg:col-span-8 space-y-10">
+        <div className="col-span-12 lg:col-span-8 space-y-6 md:space-y-10">
           {/* Main Prediction Result */}
-          <div className="bg-surface-container-lowest p-12 rounded-[2.5rem] shadow-ambient flex flex-col items-center text-center relative overflow-hidden">
+          <div className="bg-surface-container-lowest p-8 md:p-12 rounded-[2.5rem] shadow-ambient flex flex-col items-center text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px] -mr-32 -mt-32" />
             
-            <span className="label-sm text-on-surface-variant/60 mb-12">Current Prediction Result</span>
+            <span className="label-sm text-on-surface-variant/60 mb-8 md:mb-12">Current Prediction Result</span>
             
-            <div className="relative w-64 h-64 mb-12">
+            <div className="relative w-48 h-48 md:w-64 md:h-64 mb-8 md:mb-12">
               <svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">
                 <circle
                   cx="50" cy="50" r="45"
@@ -269,9 +269,9 @@ export default function Dashboard() {
           </div>
 
           {/* Charts Row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
             {/* QoE Trend */}
-            <div className="bg-surface-container-low p-8 rounded-[2rem] space-y-8">
+            <div className="bg-surface-container-low p-6 md:p-8 rounded-[2rem] space-y-6 md:space-y-8">
               <div className="flex justify-between items-center">
                 <h3 className="title-sm">QoE Trend</h3>
                 <TrendingUp size={20} className="text-primary" />
@@ -303,7 +303,7 @@ export default function Dashboard() {
             </div>
 
             {/* Factor Impact */}
-            <div className="bg-surface-container-low p-8 rounded-[2rem] space-y-8">
+            <div className="bg-surface-container-low p-6 md:p-8 rounded-[2rem] space-y-6 md:space-y-8">
               <div className="flex justify-between items-center">
                 <h3 className="title-sm">Factor Impact</h3>
                 <BarChart3 size={20} className="text-primary" />
@@ -331,7 +331,7 @@ export default function Dashboard() {
           </div>
 
           {/* Optimization Roadmap */}
-          <div className="bg-on-surface p-10 rounded-[2.5rem] space-y-8 relative overflow-hidden">
+          <div className="bg-on-surface p-8 md:p-10 rounded-[2.5rem] space-y-6 md:space-y-8 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-[100px] -mr-48 -mt-48" />
             
             <div className="flex items-center gap-3 text-white">

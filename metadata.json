@@ -1,0 +1,5 @@
+{
+  "name": "QoE Insight Dashboard",
+  "description": "Precision ML Quality Engine for predicting Quality of Experience metrics.",
+  "requestFramePermissions": []
+}

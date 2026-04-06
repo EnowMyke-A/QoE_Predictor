@@ -59,8 +59,3 @@
     background: linear-gradient(135deg, #006067 0%, #004f55 100%);
   }
 }
-
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #c7cbce transparent;
-}

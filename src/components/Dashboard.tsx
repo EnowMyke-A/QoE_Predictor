@@ -250,7 +250,7 @@ export default function Dashboard() {
                       key={speed}
                       onClick={() => setNotificationLatency(speed)}
                       className={cn(
-                        "flex-1 py-1.5 rounded-md text-[10px] font-bold transition-all cursor-pointer",
+                        "flex-1 py-1.5 rounded-md text-[10px] font-bold transition-all cursor-pointer h-9",
                         speed === notificationLatency
                           ? "bg-surface-container-lowest shadow-sm"
                           : "text-on-surface-variant/40 hover:text-on-surface-variant",
